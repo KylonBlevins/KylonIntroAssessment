@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "functions.h"
 #include "classes.h"
 using namespace std;
 
@@ -66,12 +65,42 @@ char String::CStr(string input)
 	return strCon;
 }
 
-int String::Find(string input)
+void String::CharacterAt(string input1, int input2)
 {
-
+	int lengCheck = input1.length();
+	if (input2 < lengCheck && input2 > 0)
+	{
+		char charReturn = input1[input2];
+		cout << charReturn << endl;
+	}
+	else
+	{
+		cout << "0" << endl;
+	}
 }
 
-int String::Find(int startIndex, string input)
+int String::Find(string input, string findInput)
 {
+	int finder = input.find(findInput);
+	if (finder != string::npos)
+	{
+		return finder;
+	}
+	else
+	{
+		return -1;
+	}
+}
 
+int String::Find(int startIndex, string input, string findInput)
+{
+	int finder = input.find(findInput, startIndex);
+		if (finder != string::npos)
+		{
+			return finder;
+		}
+		else
+		{
+			return -1;
+		}
 }

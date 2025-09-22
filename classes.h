@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "functions.h"
 using namespace std;
 
 class String
@@ -15,6 +14,7 @@ public:
 	string Prepend(string input);
 	bool EqualTo(string input1, string input2);
 	char CStr(string input);
-	int Find(string input);
-	int Find(int startIndex, string input);
+	void CharacterAt(string input1, int input2);
+	int Find(string input, string findInput);
+	int Find(int startIndex, string input, string findInput);
 };
