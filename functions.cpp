@@ -5,31 +5,7 @@
 #include "functions.h"
 using namespace std;
 
-void stringClassTest()
-{
-	String Test;
-	cout << "What is Cheese in lowercase?" << endl;
-	Test.toLower("Cheese");
-	cout << "What is Cheese in uppercase?" << endl;
-	Test.toUpper("Cheese");
-	cout << "How long is Cheese?" << endl;
-	Test.strLength("Cheese");
-	cout << "Add ' Burger' to the end of Cheese." << endl;
-	Test.Append("Cheese", " Burger");
-	cout << "Add 'Swiss ' in front of Cheese." << endl;
-	Test.Prepend("Cheese", "Swiss ");
-	cout << "Is it true or false that 'Cheese' is equal to 'Soda'?" << endl;
-	Test.EqualTo("Cheese", "Soda");
-	cout << "What is the character at position 4 of cheese?" << endl;
-	Test.CharacterAt("Cheese", 4);
-	cout << "What position is 'Burger' in Cheese Burger?" << endl;
-	Test.Find("Cheese Burger", "Burger");
-	cout << "When starting at position 8, -1 should show up when looking for 'Burger' in Cheese Burger" << endl;
-	Test.Find(8, "Cheese Burger", "Burger");
-	cout << "Replace the word 'Burger' with 'Pizza' in Cheese Burger" << endl;
-	Test.Replace("Cheese Burger", "Burger", "Pizza");
-	cout << "Enter a word to be written to the console." << endl;
-}
+
 
 //converts a passed in string into lowercase using the ascii method
 string String::toLower()
