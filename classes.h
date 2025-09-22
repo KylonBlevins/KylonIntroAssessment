@@ -2,23 +2,28 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "functions.h"
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
 using namespace std;
 
 class String
 {
 private:
-
+	string data;
 public:
-	string toLower(string input);
-	string toUpper(string input);
-	int strLength(string input);
-	string Append(string input, string str);
-	string Prepend(string input, string str);
-	bool EqualTo(string input1, string input2);
-	int CharacterAt(string input1, int input2);
-	int Find(string input, string findInput);
-	int Find(int startIndex, string input, string findInput);
-	string Replace(string input, string findInput, string replace);
+	string toLower();
+	string toUpper();
+	int strLength();
+	string Append(string str);
+	string Prepend(string str);
+	bool EqualTo(string input);
+	int CharacterAt(int input);
+	int Find(string findInput);
+	int Find(int startIndex, string findInput);
+	string Replace(string findInput, string replace);
 	string ReadFromConsole(string input);
-	string WriteToConsole(string input);
+	string WriteToConsole();
 };
+
+#endif
