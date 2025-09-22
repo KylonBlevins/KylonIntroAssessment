@@ -7,5 +7,5 @@ using namespace std;
 int main()
 {
 	String test;
-	test.Append("Cheese");
+	test.Replace("CheeseBurger", "Burger", "Pizza");
 }
