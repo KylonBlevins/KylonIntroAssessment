@@ -287,5 +287,7 @@ int main()
 	
 }
 
-//#ifndef
-//#define
+//#ifndef MYSTRING_H
+//#define MYSTRING_H
+
+//#endif
