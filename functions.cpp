@@ -5,7 +5,7 @@
 #include "classes.h"
 using namespace std;
 
-string toLower(string input)
+string String::toLower(string input)
 {
 	for (int i = 0; i < input.length(); i++)
 	{
@@ -18,7 +18,7 @@ string toLower(string input)
 	return input;
 }
 
-string toUpper(string input)
+string String::toUpper(string input)
 {
 	for (int i = 0; i < input.length(); i++)
 	{
@@ -31,24 +31,24 @@ string toUpper(string input)
 	return input;
 }
 
-int strLength(string input)
+int String::strLength(string input)
 {
 	return input.length();
 }
 
-string Append(string input)
+string String::Append(string input)
 {
 	input = input + "str";
 	return input;
 }
 
-string Prepend(string input)
+string String::Prepend(string input)
 {
 	input = "str" + input;
 	return input;
 }
 
-bool EqualTo(string input1, string input2)
+bool String::EqualTo(string input1, string input2)
 {
 	if (input1 == input2)
 	{
@@ -60,8 +60,18 @@ bool EqualTo(string input1, string input2)
 	}
 }
 
-char CStr(string input1)
+char String::CStr(string input)
 {
-	const char strCon = input1[1];
+	const char strCon = input[1];
 	return strCon;
+}
+
+int String::Find(string input)
+{
+
+}
+
+int String::Find(int startIndex, string input)
+{
+
 }
