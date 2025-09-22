@@ -6,6 +6,8 @@ using namespace std;
 
 class String
 {
+private:
+
 public:
 	string toLower(string input);
 	string toUpper(string input);

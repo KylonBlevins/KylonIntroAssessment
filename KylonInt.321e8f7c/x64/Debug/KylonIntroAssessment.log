@@ -1,5 +1,6 @@
 ﻿  functions.cpp
 C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(36,21): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(64,1): error C1004: unexpected end-of-file found
-  main.cpp
-  Generating Code...
+C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(71,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(85,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(98,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  KylonIntroAssessment.vcxproj -> C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\x64\Debug\KylonIntroAssessment.exe
