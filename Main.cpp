@@ -284,6 +284,6 @@ public:
 
 int main()
 {
-	calculatorChallenge();
+	
 }
 
