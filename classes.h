@@ -10,7 +10,9 @@ using namespace std;
 class String
 {
 private:
-	string data;
+	string data = "He";
+public:
+	void testStringClass();
 public:
 	string toLower();
 	string toUpper();
@@ -22,7 +24,7 @@ public:
 	int Find(string findInput);
 	int Find(int startIndex, string findInput);
 	string Replace(string findInput, string replace);
-	string ReadFromConsole(string input);
+	string ReadFromConsole();
 	string WriteToConsole();
 };
 

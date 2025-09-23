@@ -5,7 +5,42 @@
 #include "functions.h"
 using namespace std;
 
-
+void String::testStringClass()
+{
+	cout << "This program evaluates that all of the String Class functions work as intended." << endl;
+	String Test;
+	cout << "What is the current value of data?" << endl;
+	cout << Test.data << endl;
+	cout << "What is 'He' after using the toLower function?" << endl;
+	Test.toLower();
+	cout << Test.data << endl;
+	cout << "What is the length of 'he'?" << endl;
+	Test.strLength();
+	cout << "Append 'ese' to the end of 'he'." << endl;
+	Test.Append("ese");
+	cout << Test.data << endl;
+	cout << "Prepend 'C' to the front of 'heese'." << endl;
+	Test.Prepend("C");
+	cout << Test.data << endl;
+	cout << "True or false, data is now equal to the word 'Cheese'?" << endl;
+	Test.EqualTo("Cheese");
+	cout << "What character is at position 2 in 'Cheese'?" << endl;
+	Test.CharacterAt(2);
+	cout << "What position is the substring 'eese' in 'Cheese'?" << endl;
+	Test.Find("eese");
+	cout << "Can you find 'ese' starting from position 4 in 'Cheese'? If not, return -1" << endl;
+	Test.Find(4, "ese");
+	cout << "Replace 'eese' with 'ores'." << endl;
+	Test.Replace("eese", "ores");
+	cout << Test.data << endl;
+	cout << "What is the word 'Chores' after using the toUpper function?" << endl;
+	Test.toUpper();
+	cout << Test.data << endl;
+	cout << "Now input any string of your choice to change data to." << endl;
+	Test.ReadFromConsole();
+	cout << "Now, the console will print data." << endl;
+	Test.WriteToConsole();
+}
 
 //converts a passed in string into lowercase using the ascii method
 string String::toLower()
@@ -17,7 +52,6 @@ string String::toLower()
 			data[i] = data[i] + 32;
 		}
 	}
-	cout << data;
 	return data;
 }
 //converts a passed in string into uppercase using the ascii method
@@ -30,7 +64,6 @@ string String::toUpper()
 			data[i] = data[i] - 32;
 		}
 	}
-	cout << data;
 	return data;
 }
 //gets the length of a passed in string
@@ -42,13 +75,11 @@ int String::strLength()
 //appends str to the end of a passed in string
 string String::Append(string str)
 {
-	cout << data.append(str) << endl;
 	return data.append(str);
 }
 //prepends str to the front of a passed in string
 string String::Prepend(string str)
 {
-	cout << data.insert(0, str);
 	return data.insert(0, str);
 }
 //checks if two passed in string are equal to each other
@@ -117,7 +148,6 @@ string String::Replace(string findInput, string replace)
 	int finderLeng = findInput.length() + finder;
 	if (finder != string::npos)
 	{
-		cout << data.replace(finder, finderLeng, replace) << endl;
 		return data.replace(finder, finderLeng, replace);
 	}
 	else
@@ -125,9 +155,12 @@ string String::Replace(string findInput, string replace)
 		return "Not Found";
 }
 
-string String::ReadFromConsole(string input)
+string String::ReadFromConsole()
 {
-	return input;
+	string input;
+	cin >> input;
+	data = input;
+	return data;
 }
 
 string String::WriteToConsole()

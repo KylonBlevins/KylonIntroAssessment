@@ -1,71 +1,8 @@
 ﻿  functions.cpp
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(12,6): error C2660: 'String::toLower': function does not take 1 arguments
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\classes.h(15,9):
-      see declaration of 'String::toLower'
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(12,6):
-      while trying to match the argument list '(const char [7])'
-  
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(14,6): error C2660: 'String::toUpper': function does not take 1 arguments
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\classes.h(16,9):
-      see declaration of 'String::toUpper'
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(14,6):
-      while trying to match the argument list '(const char [7])'
-  
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(16,6): error C2660: 'String::strLength': function does not take 1 arguments
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\classes.h(17,6):
-      see declaration of 'String::strLength'
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(16,6):
-      while trying to match the argument list '(const char [7])'
-  
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(18,6): error C2660: 'String::Append': function does not take 2 arguments
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\classes.h(18,9):
-      see declaration of 'String::Append'
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(18,6):
-      while trying to match the argument list '(const char [7], const char [8])'
-  
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(20,6): error C2660: 'String::Prepend': function does not take 2 arguments
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\classes.h(19,9):
-      see declaration of 'String::Prepend'
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(20,6):
-      while trying to match the argument list '(const char [7], const char [7])'
-  
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(22,6): error C2660: 'String::EqualTo': function does not take 2 arguments
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\classes.h(20,7):
-      see declaration of 'String::EqualTo'
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(22,6):
-      while trying to match the argument list '(const char [7], const char [5])'
-  
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(24,6): error C2660: 'String::CharacterAt': function does not take 2 arguments
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\classes.h(21,6):
-      see declaration of 'String::CharacterAt'
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(24,6):
-      while trying to match the argument list '(const char [7], int)'
-  
-  main.cpp
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(26,6): error C2665: 'String::Find': no overloaded function could convert all the argument types
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\classes.h(23,6):
-      could be 'int String::Find(int,std::string)'
-          C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(26,6):
-          'int String::Find(int,std::string)': cannot convert argument 1 from 'const char [14]' to 'int'
-              C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(26,12):
-              There is no context in which this conversion is possible
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(26,6):
-      while trying to match the argument list '(const char [14], const char [7])'
-  
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(28,6): error C2661: 'String::Find': no overloaded function takes 3 arguments
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(28,6):
-      while trying to match the argument list '(int, const char [14], const char [7])'
-  
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(30,6): error C2660: 'String::Replace': function does not take 3 arguments
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\classes.h(24,9):
-      see declaration of 'String::Replace'
-      C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(30,6):
-      while trying to match the argument list '(const char [14], const char [7], const char [6])'
-  
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(64,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(95,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(111,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(126,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(140,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(141,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Generating Code...
+C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(73,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(102,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(118,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(133,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(147,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(148,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  KylonIntroAssessment.vcxproj -> C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\x64\Debug\KylonIntroAssessment.exe
