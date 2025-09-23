@@ -41,10 +41,12 @@ void TestString::testStringClass()
 	Test.ReadFromConsole();
 	cout << "Now, the console will print data." << endl;
 	Test.WriteToConsole();
+
+	Test.resultsLogger();
 }
 
 //converts data into lowercase using the ascii method
-int String::toLower()
+string String::toLower()
 {
 	for (int i = 0; i < data.length(); i++)
 	{
@@ -53,10 +55,11 @@ int String::toLower()
 			data[i] = data[i] + 32;
 		}
 	}
-	return true;
+	testsPassed = testsPassed + 1;
+	return data;
 }
 //converts data into uppercase using the ascii method
-int String::toUpper()
+string String::toUpper()
 {
 	for (int i = 0; i < data.length(); i++)
 	{
@@ -65,32 +68,37 @@ int String::toUpper()
 			data[i] = data[i] - 32;
 		}
 	}
-	return true;
+	testsPassed = testsPassed + 1;
+	return data;
 }
 //gets the length of data
 int String::strLength()
 {
 	cout << data.length() << endl;
-	return true;
+	testsPassed = testsPassed + 1;
+	return data.length();
 }
 //appends str to the end of data
-int String::Append(string str)
+string String::Append(string str)
 {
 	data = data.append(str);
-	return true;
+	testsPassed = testsPassed + 1;
+	return data;
 }
 //prepends str to the front of data
-int String::Prepend(string str)
+string String::Prepend(string str)
 {
 	data = data.insert(0, str);
-	return true;
+	testsPassed = testsPassed + 1;
+	return data;
 }
 //checks if data is equal to a passed in string
-int String::EqualTo(string input)
+bool String::EqualTo(string input)
 {
 	if (data == input)
 	{
 		cout << "true" << endl;
+		testsPassed = testsPassed + 1;
 		return true;
 	}
 	else
@@ -107,12 +115,13 @@ int String::CharacterAt(int input)
 	{
 		char charReturn = data[input];
 		cout << charReturn << endl;
-		return true;
+		testsPassed = testsPassed + 1;
+		return data[input];
 	}
 	else
 	{
 		cout << 0 << endl;
-		return false;
+		return 0;
 	}
 }
 //finds a specified string (findinput) inside of a passed in string (input)
@@ -122,12 +131,13 @@ int String::Find(string findInput)
 	if (finder != string::npos)
 	{
 		cout << finder << endl;
-		return true;
+		testsPassed = testsPassed + 1;
+		return finder;
 	}
 	else
 	{
 		cout << -1 << endl;
-		return false;
+		return -1;
 	}
 }
 //finds a specified string (findinput) from a specified start index inside of a passed in string (input)
@@ -137,56 +147,66 @@ int String::Find(int startIndex, string findInput)
 		if (finder != string::npos)
 		{
 			cout << finder << endl;
-			return true;
+			testsPassed = testsPassed + 1;
+			return 1;
 		}
 		else
 		{
 			cout << -1 << endl;
-			return false;
+			return 0;
 		}
 }
 //replaces a specified part of a string (findInput) with a different phrase
-int String::Replace(string findInput, string replace)
+string String::Replace(string findInput, string replace)
 {
 	int finder = data.find(findInput);
 	int finderLeng = findInput.length() + finder;
-	if (finder != string::npos)
+	for (int i = 0; i < finderLeng; i++)
 	{
-		data = data.replace(finder, finderLeng, replace);
-		return true;
+		if (finder != string::npos)
+		{
+			data = data.replace(finder, finderLeng, replace);
+		}
+		else
+			cout << "Not Found" << endl;
 	}
-	else
-		cout << "Not Found" << endl;
-		return false;
+	testsPassed = testsPassed + 1;
+	return data;
 }
 //takes an input from the user and changes the value of data to that input
-int String::ReadFromConsole()
+string String::ReadFromConsole()
 {
 	string input;
 	cin >> input;
 	data = input;
-	return true;
+	testsPassed = testsPassed + 1;
+	return data;
 }
 //returns data and displays it on the console
-int String::WriteToConsole()
+string String::WriteToConsole()
 {
 	cout << data << endl;
-	return true;
+	testsPassed = testsPassed + 1;
+	return data;
 }
-
+//checks how many of the tests were successful and logs them to a log file
 void TestString::resultsLogger()
 {
 	ofstream strLog("string_test_log.txt", ios::app);
 
-	int i = 0;
-	while (i != 11)
+	float passRate = (float)testsPassed / 12;
+
+	if (strLog.is_open())
 	{
-		if (strLog.is_open())
-		{
-			if ()
-			{
-				strLog << "toLower Test Passed" << endl;
-			}
-		}
+		strLog << "|String Class Test Results|" << endl;
+		strLog << "Tests passed: " << testsPassed << "/12" << endl;
+		strLog << "Percentage passed: " << passRate << "%" << endl;
+		strLog.close();
+
+		cout << "Test results logged successfully!" << endl;
+	}
+	else
+	{
+		cout << "Warning: Could not write to string test log!" << endl;
 	}
 }
