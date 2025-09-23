@@ -4,10 +4,11 @@
 #include "classes.h"
 using namespace std;
 
+TestString Test;
+
 //This function runs and tests all of the functions inside of the String class
 void TestString::testStringClass()
 {
-	TestString Test;
 	cout << "This program evaluates that all of the String Class functions work as intended." << endl;
 	cout << "What is the current value of data?" << endl;
 	cout << Test.data << endl;
@@ -43,7 +44,7 @@ void TestString::testStringClass()
 }
 
 //converts data into lowercase using the ascii method
-string String::toLower()
+int String::toLower()
 {
 	for (int i = 0; i < data.length(); i++)
 	{
@@ -52,10 +53,10 @@ string String::toLower()
 			data[i] = data[i] + 32;
 		}
 	}
-	return data;
+	return true;
 }
 //converts data into uppercase using the ascii method
-string String::toUpper()
+int String::toUpper()
 {
 	for (int i = 0; i < data.length(); i++)
 	{
@@ -64,26 +65,28 @@ string String::toUpper()
 			data[i] = data[i] - 32;
 		}
 	}
-	return data;
+	return true;
 }
 //gets the length of data
 int String::strLength()
 {
 	cout << data.length() << endl;
-	return data.length();
+	return true;
 }
 //appends str to the end of data
-string String::Append(string str)
+int String::Append(string str)
 {
-	return data.append(str);
+	data = data.append(str);
+	return true;
 }
 //prepends str to the front of data
-string String::Prepend(string str)
+int String::Prepend(string str)
 {
-	return data.insert(0, str);
+	data = data.insert(0, str);
+	return true;
 }
 //checks if data is equal to a passed in string
-bool String::EqualTo(string input)
+int String::EqualTo(string input)
 {
 	if (data == input)
 	{
@@ -104,12 +107,12 @@ int String::CharacterAt(int input)
 	{
 		char charReturn = data[input];
 		cout << charReturn << endl;
-		return charReturn;
+		return true;
 	}
 	else
 	{
 		cout << 0 << endl;
-		return 0;
+		return false;
 	}
 }
 //finds a specified string (findinput) inside of a passed in string (input)
@@ -119,12 +122,12 @@ int String::Find(string findInput)
 	if (finder != string::npos)
 	{
 		cout << finder << endl;
-		return finder;
+		return true;
 	}
 	else
 	{
 		cout << -1 << endl;
-		return -1;
+		return false;
 	}
 }
 //finds a specified string (findinput) from a specified start index inside of a passed in string (input)
@@ -134,38 +137,56 @@ int String::Find(int startIndex, string findInput)
 		if (finder != string::npos)
 		{
 			cout << finder << endl;
-			return finder;
+			return true;
 		}
 		else
 		{
 			cout << -1 << endl;
-			return -1;
+			return false;
 		}
 }
 //replaces a specified part of a string (findInput) with a different phrase
-string String::Replace(string findInput, string replace)
+int String::Replace(string findInput, string replace)
 {
 	int finder = data.find(findInput);
 	int finderLeng = findInput.length() + finder;
 	if (finder != string::npos)
 	{
-		return data.replace(finder, finderLeng, replace);
+		data = data.replace(finder, finderLeng, replace);
+		return true;
 	}
 	else
 		cout << "Not Found" << endl;
-		return "Not Found";
+		return false;
 }
 //takes an input from the user and changes the value of data to that input
-string String::ReadFromConsole()
+int String::ReadFromConsole()
 {
 	string input;
 	cin >> input;
 	data = input;
-	return data;
+	return true;
 }
 //returns data and displays it on the console
-string String::WriteToConsole()
+int String::WriteToConsole()
 {
 	cout << data << endl;
-	return data;
+	return true;
+}
+
+void TestString::resultsLogger()
+{
+	ofstream strLog("string_test_log.txt", ios::app);
+
+	int i = 0;
+	while (i != 11)
+	{
+		if (strLog.is_open())
+		{
+			if ()
+			{
+				strLog << "toLower Test Passed" << endl;
+			}
+		}
+	}
 }
