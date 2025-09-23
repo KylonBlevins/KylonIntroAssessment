@@ -34,7 +34,8 @@
               "RelativeToolTip": "main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-22T15:35:54.579Z"
+              "WhenOpened": "2025-09-22T15:35:54.579Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -44,9 +45,10 @@
               "RelativeDocumentMoniker": "classes.h",
               "ToolTip": "C:\\Users\\s258003\\Documents\\GitHub\\KylonIntroAssessment\\classes.h",
               "RelativeToolTip": "classes.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-09-22T15:43:15.37Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -55,11 +57,12 @@
               "Title": "functions.cpp",
               "DocumentMoniker": "C:\\Users\\s258003\\Documents\\GitHub\\KylonIntroAssessment\\functions.cpp",
               "RelativeDocumentMoniker": "functions.cpp",
-              "ToolTip": "C:\\Users\\s258003\\Documents\\GitHub\\KylonIntroAssessment\\functions.cpp*",
-              "RelativeToolTip": "functions.cpp*",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAAKwAAAAfAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\s258003\\Documents\\GitHub\\KylonIntroAssessment\\functions.cpp",
+              "RelativeToolTip": "functions.cpp",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAWwDkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-22T16:58:14.452Z",
+              "IsPinned": true,
               "EditorCaption": ""
             }
           ]

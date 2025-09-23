@@ -29,8 +29,8 @@ void TestString::testStringClass()
 	Test.CharacterAt(2);
 	cout << "What position is the substring 'eese' in 'Cheese'?" << endl;
 	Test.Find("eese");
-	cout << "Can you find 'ese' starting from position 4 in 'Cheese'? If not, return -1" << endl;
-	Test.Find(4, "ese");
+	cout << "What position is the substring 'ese' starting from position 2 in 'Cheese'?" << endl;
+	Test.Find(2, "ese");
 	cout << "Replace 'eese' with 'ores'." << endl;
 	Test.Replace("eese", "ores");
 	cout << Test.data << endl;
@@ -195,10 +195,10 @@ void TestString::resultsLogger()
 	ofstream strLog("string_test_log.txt", ios::app);
 
 	float passRate = (float)testsPassed / 12;
+	passRate = passRate * 100;
 
 	if (strLog.is_open())
 	{
-		strLog << "|String Class Test Results|" << endl;
 		strLog << "Tests passed: " << testsPassed << "/12" << endl;
 		strLog << "Percentage passed: " << passRate << "%" << endl;
 		strLog.close();
