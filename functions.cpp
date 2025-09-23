@@ -2,7 +2,6 @@
 #include <string>
 #include <fstream>
 #include "classes.h"
-#include "functions.h"
 using namespace std;
 
 void String::testStringClass()

@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "functions.h"
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 using namespace std;
