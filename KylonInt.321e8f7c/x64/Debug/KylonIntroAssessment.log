@@ -5,6 +5,4 @@ C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(283,13): wa
 C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(298,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(314,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\functions.cpp(315,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  main.cpp
-  Generating Code...
   KylonIntroAssessment.vcxproj -> C:\Users\s258003\Documents\GitHub\KylonIntroAssessment\x64\Debug\KylonIntroAssessment.exe

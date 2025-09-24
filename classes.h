@@ -25,6 +25,7 @@ public:
 	string Replace(string findInput, string replace);
 	string ReadFromConsole();
 	string WriteToConsole();
+	void assessment1Data(); //runs the criteria for assessment 1
 };
 //Inheriting class containing testing function
 class TestString : public StringC

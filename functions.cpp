@@ -360,3 +360,11 @@ void TestString::resultsLogger()
 		cout << "Warning: Could not write to string test log!" << endl;
 	}
 }
+
+void StringC::assessment1Data()
+{
+	Test.data = "ello,";
+	Test.Append(" World");
+	Test.Prepend("H");
+	Test.WriteToConsole();
+}
