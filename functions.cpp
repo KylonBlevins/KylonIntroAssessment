@@ -10,25 +10,33 @@ TestString Test;
 void TestString::testStringClass()
 {
 	ofstream strLog("string_test_log.txt", ios::app);
-	cout << "This program evaluates that all of the String Class functions work as intended." << endl;
-	cout << "What is the current value of data?" << endl;
-	strLog << "|String Class Test Log|" << endl;
-	Test.toLowerTest();
-	Test.lengTest();
-	Test.appTest();
-	Test.preTest();
-	Test.equalTest();
-	Test.charAtTest();
-	Test.findTest1();
-	Test.findTest2();
-	Test.replaceTest();
-	Test.toUpperTest();
-	Test.readTest();
-	Test.writeTest();
-	Test.resultsLogger();
-	strLog << " " << endl;
+	if (strLog.is_open())
+	{
+		cout << "This program evaluates that all of the String Class functions work as intended." << endl;
+		cout << "What is the current value of data?" << endl;
+		cout << Test.data << endl;
+		strLog << "|String Class Test Log|" << endl;
+		Test.toLowerTest();
+		Test.lengTest();
+		Test.appTest();
+		Test.preTest();
+		Test.equalTest();
+		Test.charAtTest();
+		Test.findTest1();
+		Test.findTest2();
+		Test.replaceTest();
+		Test.toUpperTest();
+		Test.readTest();
+		Test.writeTest();
+		Test.resultsLogger();
+		strLog << " " << endl;
+	}
+	else
+	{
+		cout << "Failed to write to test log!" << endl;
+	}
 }
-
+//Test Functions
 void TestString::toLowerTest()
 {
 	ofstream strLog("string_test_log.txt", ios::app);
@@ -195,10 +203,10 @@ void TestString::writeTest()
 	testsPassed = testsPassed + 1;
 	strLog << "Write Test Passed" << endl;
 }
-
+//Test Functions
 
 //converts data into lowercase using the ascii method
-string String::toLower()
+string StringC::toLower()
 {
 	for (int i = 0; i < data.length(); i++)
 	{
@@ -210,7 +218,7 @@ string String::toLower()
 	return data;
 }
 //converts data into uppercase using the ascii method
-string String::toUpper()
+string StringC::toUpper()
 {
 	for (int i = 0; i < data.length(); i++)
 	{
@@ -222,25 +230,25 @@ string String::toUpper()
 	return data;
 }
 //gets the length of data
-int String::strLength()
+int StringC::strLength()
 {
 	cout << data.length() << endl;
 	return data.length();
 }
 //appends str to the end of data
-string String::Append(string str)
+string StringC::Append(string str)
 {
 	data = data.append(str);
 	return data;
 }
 //prepends str to the front of data
-string String::Prepend(string str)
+string StringC::Prepend(string str)
 {
 	data = data.insert(0, str);
 	return data;
 }
 //checks if data is equal to a passed in string
-bool String::EqualTo(string input)
+bool StringC::EqualTo(string input)
 {
 	if (data == input)
 	{
@@ -254,7 +262,7 @@ bool String::EqualTo(string input)
 	}
 }
 //gets the character located at (input) of data
-char String::CharacterAt(int input)
+char StringC::CharacterAt(int input)
 {
 	int lengCheck = data.length();
 	if (input < lengCheck && input > 0)
@@ -270,7 +278,7 @@ char String::CharacterAt(int input)
 	}
 }
 //finds a specified string (findinput) inside of a passed in string (input)
-int String::Find(string findInput)
+int StringC::Find(string findInput)
 {
 	int finder = data.find(findInput);
 	if (finder != string::npos)
@@ -285,7 +293,7 @@ int String::Find(string findInput)
 	}
 }
 //finds a specified string (findinput) from a specified start index inside of a passed in string (input)
-int String::Find(int startIndex, string findInput)
+int StringC::Find(int startIndex, string findInput)
 {
 	int finder = data.find(findInput, startIndex);
 		if (finder != string::npos)
@@ -300,7 +308,7 @@ int String::Find(int startIndex, string findInput)
 		}
 }
 //replaces a specified part of a string (findInput) with a different phrase
-string String::Replace(string findInput, string replace)
+string StringC::Replace(string findInput, string replace)
 {
 	int i = 0;
 	int finder = data.find(findInput);
@@ -318,7 +326,7 @@ string String::Replace(string findInput, string replace)
 	return data;
 }
 //takes an input from the user and changes the value of data to that input
-string String::ReadFromConsole()
+string StringC::ReadFromConsole()
 {
 	string input;
 	cin >> input;
@@ -326,7 +334,7 @@ string String::ReadFromConsole()
 	return data;
 }
 //returns data and displays it on the console
-string String::WriteToConsole()
+string StringC::WriteToConsole()
 {
 	cout << data << endl;
 	return data;

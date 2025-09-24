@@ -7,7 +7,7 @@
 using namespace std;
 
 //String utility class that contains functions that are useful for manipulating strings
-class String
+class StringC
 {
 protected:
 	string data = "He"; //the universal variable used by all functions
@@ -27,7 +27,7 @@ public:
 	string WriteToConsole();
 };
 //Inheriting class containing testing function
-class TestString : public String
+class TestString : public StringC
 {
 public:
 	void testStringClass();  //runs all functions on data to manipulate it and evaluate if the functions work
