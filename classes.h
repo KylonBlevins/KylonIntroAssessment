@@ -11,7 +11,7 @@ class StringC
 {
 protected:
 	string data = "He"; //the universal variable used by all functions
-	int testsPassed = 0;
+	int testsPassed = 0; //variable for evaluating how many of the functions passed for the resultsLogger function
 public:
 	string toLower();
 	string toUpper();
