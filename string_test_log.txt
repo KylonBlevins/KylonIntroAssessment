@@ -1,3 +1,32 @@
-
+|String Class Test Log|
+toLower Test Passed
+strLength Test Passed
+Append Test Passed
+Prepend Test Passed
+EqualTo Test Passed
+CharacterAt Test Passed
+Find Test 1 Passed
+Find Test 2 Passed
+Replace Test Passed
+ToUpper Test Passed
+Read Test Passed
+Write Test Passed
 Tests passed: 12/12
 Percentage passed: 100%
+ 
+|String Class Test Log|
+toLower Test Passed
+strLength Test Passed
+Append Test Passed
+Prepend Test Passed
+EqualTo Test Passed
+CharacterAt Test Passed
+Find Test 1 Passed
+Find Test 2 Passed
+Replace Test Passed
+ToUpper Test Passed
+Read Test Passed
+Write Test Passed
+Tests passed: 12/12
+Percentage passed: 100%
+ 

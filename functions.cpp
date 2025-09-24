@@ -6,44 +6,196 @@ using namespace std;
 
 TestString Test;
 
-//This function runs and tests all of the functions inside of the String class
+//This function and those below it run and test all of the functions inside of the String class
 void TestString::testStringClass()
 {
+	ofstream strLog("string_test_log.txt", ios::app);
 	cout << "This program evaluates that all of the String Class functions work as intended." << endl;
 	cout << "What is the current value of data?" << endl;
-	cout << Test.data << endl;
+	strLog << "|String Class Test Log|" << endl;
+	Test.toLowerTest();
+	Test.lengTest();
+	Test.appTest();
+	Test.preTest();
+	Test.equalTest();
+	Test.charAtTest();
+	Test.findTest1();
+	Test.findTest2();
+	Test.replaceTest();
+	Test.toUpperTest();
+	Test.readTest();
+	Test.writeTest();
+	Test.resultsLogger();
+	strLog << " " << endl;
+}
+
+void TestString::toLowerTest()
+{
+	ofstream strLog("string_test_log.txt", ios::app);
 	cout << "What is 'He' after using the toLower function?" << endl;
 	Test.toLower();
 	cout << Test.data << endl;
+	if (data == "he")
+	{
+		testsPassed = testsPassed + 1;
+		strLog << "toLower Test Passed" << endl;
+	}
+	else
+	{
+		strLog << "toLower Test Failed" << endl;
+	}
+}
+void TestString::lengTest()
+{
+	ofstream strLog("string_test_log.txt", ios::app);
 	cout << "What is the length of 'he'?" << endl;
-	Test.strLength();
+	if (strLength() == 2)
+	{
+		testsPassed = testsPassed + 1;
+		strLog << "strLength Test Passed" << endl;
+	}
+	else
+	{
+		strLog << "strLength Test Failed" << endl;
+	}
+}
+void TestString::appTest()
+{
+	ofstream strLog("string_test_log.txt", ios::app);
 	cout << "Append 'ese' to the end of 'he'." << endl;
 	Test.Append("ese");
 	cout << Test.data << endl;
-	cout << "Prepend 'C' to the front of 'heese'." << endl;
+	if (data == "heese")
+	{
+		testsPassed = testsPassed + 1;
+		strLog << "Append Test Passed" << endl;
+	}
+	else
+	{
+		strLog << "Append Test Failed" << endl;
+	}
+}
+void TestString::preTest()
+{
+	ofstream strLog("string_test_log.txt", ios::app);
+	cout << "Prepend 'C' to the front of 'heese'" << endl;
 	Test.Prepend("C");
 	cout << Test.data << endl;
+	if (data == "Cheese")
+	{
+		testsPassed = testsPassed + 1;
+		strLog << "Prepend Test Passed" << endl;
+	}
+	else
+	{
+		strLog << "Prepend Test Failed" << endl;
+	}
+}
+void TestString::equalTest()
+{
+	ofstream strLog("string_test_log.txt", ios::app);
 	cout << "True or false, data is now equal to the word 'Cheese'?" << endl;
-	Test.EqualTo("Cheese");
+	if (EqualTo("Cheese") == true)
+	{
+		testsPassed = testsPassed + 1;
+		strLog << "EqualTo Test Passed" << endl;
+	}
+	else
+	{
+		strLog << "EqualTo Test Failed" << endl;
+	}
+}
+void TestString::charAtTest()
+{
+	ofstream strLog("string_test_log.txt", ios::app);
 	cout << "What character is at position 2 in 'Cheese'?" << endl;
-	Test.CharacterAt(2);
+	if (CharacterAt(2) == 'e')
+	{
+		testsPassed = testsPassed + 1;
+		strLog << "CharacterAt Test Passed" << endl;
+	}
+	else
+	{
+		strLog << "CharacterAt Test Failed" << endl;
+	}
+}
+void TestString::findTest1()
+{
+	ofstream strLog("string_test_log.txt", ios::app);
 	cout << "What position is the substring 'eese' in 'Cheese'?" << endl;
-	Test.Find("eese");
+	if (Find("eese") == 2)
+	{
+		testsPassed = testsPassed + 1;
+		strLog << "Find Test 1 Passed" << endl;
+	}
+	else
+	{
+		strLog << "Find Test 1 Failed" << endl;
+	}
+}
+void TestString::findTest2()
+{
+	ofstream strLog("string_test_log.txt", ios::app);
 	cout << "What position is the substring 'ese' starting from position 2 in 'Cheese'?" << endl;
-	Test.Find(2, "ese");
+	if (Find(2, "ese") == 3)
+	{
+		testsPassed = testsPassed + 1;
+		strLog << "Find Test 2 Passed" << endl;
+	}
+	else
+	{
+		strLog << "Find Test 2 Failed" << endl;
+	}
+}
+void TestString::replaceTest()
+{
+	ofstream strLog("string_test_log.txt", ios::app);
 	cout << "Replace 'eese' with 'ores'." << endl;
 	Test.Replace("eese", "ores");
 	cout << Test.data << endl;
+	if (data == "Chores")
+	{
+		testsPassed = testsPassed + 1;
+		strLog << "Replace Test Passed" << endl;
+	}
+	else
+	{
+		strLog << "Replace Test Failed" << endl;
+	}
+}
+void TestString::toUpperTest()
+{
+	ofstream strLog("string_test_log.txt", ios::app);
 	cout << "What is the word 'Chores' after using the toUpper function?" << endl;
 	Test.toUpper();
 	cout << Test.data << endl;
-	cout << "Now input any string of your choice to change data to." << endl;
+	if (data == "CHORES")
+	{
+		testsPassed = testsPassed + 1;
+		strLog << "ToUpper Test Passed" << endl;
+	}
+	else
+	{
+		strLog << "ToUpper Test Failed" << endl;
+	}
+}
+void TestString::readTest()
+{
+	ofstream strLog("string_test_log.txt", ios::app);
+	cout << "Enter any string." << endl;
 	Test.ReadFromConsole();
+	testsPassed = testsPassed + 1;
+	strLog << "Read Test Passed" << endl;
+}
+void TestString::writeTest()
+{
+	ofstream strLog("string_test_log.txt", ios::app);
 	cout << "Now, the console will print data." << endl;
 	Test.WriteToConsole();
-
-	Test.resultsLogger();
+	testsPassed = testsPassed + 1;
+	strLog << "Write Test Passed" << endl;
 }
+
 
 //converts data into lowercase using the ascii method
 string String::toLower()
@@ -55,7 +207,6 @@ string String::toLower()
 			data[i] = data[i] + 32;
 		}
 	}
-	testsPassed = testsPassed + 1;
 	return data;
 }
 //converts data into uppercase using the ascii method
@@ -68,28 +219,24 @@ string String::toUpper()
 			data[i] = data[i] - 32;
 		}
 	}
-	testsPassed = testsPassed + 1;
 	return data;
 }
 //gets the length of data
 int String::strLength()
 {
 	cout << data.length() << endl;
-	testsPassed = testsPassed + 1;
 	return data.length();
 }
 //appends str to the end of data
 string String::Append(string str)
 {
 	data = data.append(str);
-	testsPassed = testsPassed + 1;
 	return data;
 }
 //prepends str to the front of data
 string String::Prepend(string str)
 {
 	data = data.insert(0, str);
-	testsPassed = testsPassed + 1;
 	return data;
 }
 //checks if data is equal to a passed in string
@@ -98,7 +245,6 @@ bool String::EqualTo(string input)
 	if (data == input)
 	{
 		cout << "true" << endl;
-		testsPassed = testsPassed + 1;
 		return true;
 	}
 	else
@@ -108,14 +254,13 @@ bool String::EqualTo(string input)
 	}
 }
 //gets the character located at (input) of data
-int String::CharacterAt(int input)
+char String::CharacterAt(int input)
 {
 	int lengCheck = data.length();
 	if (input < lengCheck && input > 0)
 	{
 		char charReturn = data[input];
 		cout << charReturn << endl;
-		testsPassed = testsPassed + 1;
 		return data[input];
 	}
 	else
@@ -131,7 +276,6 @@ int String::Find(string findInput)
 	if (finder != string::npos)
 	{
 		cout << finder << endl;
-		testsPassed = testsPassed + 1;
 		return finder;
 	}
 	else
@@ -147,8 +291,7 @@ int String::Find(int startIndex, string findInput)
 		if (finder != string::npos)
 		{
 			cout << finder << endl;
-			testsPassed = testsPassed + 1;
-			return 1;
+			return finder;
 		}
 		else
 		{
@@ -159,18 +302,19 @@ int String::Find(int startIndex, string findInput)
 //replaces a specified part of a string (findInput) with a different phrase
 string String::Replace(string findInput, string replace)
 {
+	int i = 0;
 	int finder = data.find(findInput);
 	int finderLeng = findInput.length() + finder;
-	for (int i = 0; i < finderLeng; i++)
+	while (i < finderLeng)
 	{
 		if (finder != string::npos)
 		{
+			i += 1;
 			data = data.replace(finder, finderLeng, replace);
 		}
 		else
 			cout << "Not Found" << endl;
 	}
-	testsPassed = testsPassed + 1;
 	return data;
 }
 //takes an input from the user and changes the value of data to that input
@@ -179,14 +323,12 @@ string String::ReadFromConsole()
 	string input;
 	cin >> input;
 	data = input;
-	testsPassed = testsPassed + 1;
 	return data;
 }
 //returns data and displays it on the console
 string String::WriteToConsole()
 {
 	cout << data << endl;
-	testsPassed = testsPassed + 1;
 	return data;
 }
 //checks how many of the tests were successful and logs them to a log file

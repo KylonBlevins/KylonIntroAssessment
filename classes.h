@@ -19,7 +19,7 @@ public:
 	string Append(string str);
 	string Prepend(string str);
 	bool EqualTo(string input);
-	int CharacterAt(int input);
+	char CharacterAt(int input);
 	int Find(string findInput);
 	int Find(int startIndex, string findInput);
 	string Replace(string findInput, string replace);
@@ -31,6 +31,18 @@ class TestString : public String
 {
 public:
 	void testStringClass();  //runs all functions on data to manipulate it and evaluate if the functions work
+	void toLowerTest(); //all the below functions individually run and test each string function
+	void lengTest();
+	void appTest();
+	void preTest();
+	void equalTest();
+	void charAtTest();
+	void findTest1();
+	void findTest2();
+	void replaceTest();
+	void toUpperTest();
+	void readTest();
+	void writeTest();
 	void resultsLogger(); //logs the results of the testStringClass function and how many were successful
 };
 
