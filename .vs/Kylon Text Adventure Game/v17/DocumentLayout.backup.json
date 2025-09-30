@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -32,22 +32,9 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\s258003\\Documents\\GitHub\\Kylon Text Adventure Game\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-30T14:42:15.024Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "functions.cpp",
-              "DocumentMoniker": "C:\\Users\\s258003\\Documents\\GitHub\\Kylon Text Adventure Game\\functions.cpp",
-              "RelativeDocumentMoniker": "functions.cpp",
-              "ToolTip": "C:\\Users\\s258003\\Documents\\GitHub\\Kylon Text Adventure Game\\functions.cpp",
-              "RelativeToolTip": "functions.cpp",
-              "ViewState": "AgIAAFsBAAAAAAAAAAAmwH8BAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-30T14:42:13.897Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -57,9 +44,23 @@
               "RelativeDocumentMoniker": "classes.h",
               "ToolTip": "C:\\Users\\s258003\\Documents\\GitHub\\Kylon Text Adventure Game\\classes.h",
               "RelativeToolTip": "classes.h",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADkAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAmwD4AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-30T14:42:12.497Z"
+              "WhenOpened": "2025-09-30T14:42:12.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "functions.cpp",
+              "DocumentMoniker": "C:\\Users\\s258003\\Documents\\GitHub\\Kylon Text Adventure Game\\functions.cpp",
+              "RelativeDocumentMoniker": "functions.cpp",
+              "ToolTip": "C:\\Users\\s258003\\Documents\\GitHub\\Kylon Text Adventure Game\\functions.cpp",
+              "RelativeToolTip": "functions.cpp",
+              "ViewState": "AgIAAOIBAAAAAAAAAADgv/MBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-30T14:42:13.897Z",
+              "EditorCaption": ""
             }
           ]
         }

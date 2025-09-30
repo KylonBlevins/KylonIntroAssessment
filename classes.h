@@ -57,8 +57,8 @@ public:
 	void Command();
 	void commandList();
 protected:
-	int exit = 0;
-	int currentRoom = 0;
+	bool exit = 0;
+	int currentRoom;
 	string commandIn;
 };
 
@@ -66,6 +66,7 @@ class Player : public Game
 {
 private:
 	string playerName;
+	int currentRoom = 0;
 public:
 	void createPlayer();
 	//player actions
