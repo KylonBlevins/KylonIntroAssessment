@@ -5,6 +5,9 @@
 using namespace std;
 
 Player P1;
+Game Gameval;
+//Room Rooms;
+
 TestString Test;
 
 //This function and those below it run and test all of the functions inside of the String class
@@ -370,11 +373,7 @@ void StringC::assessment1Data()
 	Test.WriteToConsole();
 }
 
-void Player::createPlayer()
-{
-	cout << "What is your name?" << endl;
-	cin >> playerName;
-}
+
 
 void Game::Command()
 {
@@ -403,21 +402,25 @@ void Game::Command()
 	{
 		P1.Cast();
 	}
+	else if (commandIn == "exit")
+	{
+		
+	}
 }
 
 void Player::MoveN()
 {
-	if (currentRoom == 0)
+	if (currentRoom == 0 || currentRoom == 1)
 	{
 		cout << "Moved North" << endl;
 		currentRoom = 1;
 	}
-	else if (currentRoom == 4)
+	else if (currentRoom == 3)
 	{
 		cout << "Moved North" << endl;
 		currentRoom = 0;
 	}
-	else if (currentRoom == 1 || currentRoom == 2 || currentRoom == 3)
+	else if (currentRoom == 2 || currentRoom == 4)
 	{
 		cout << "Cannot move North" << endl;
 	}
@@ -430,12 +433,12 @@ void Player::MoveW()
 		cout << "Moved West" << endl;
 		currentRoom = 2;
 	}
-	else if (currentRoom == 3)
+	else if (currentRoom == 4)
 	{
 		cout << "Moved West" << endl;
 		currentRoom = 0;
 	}
-	else if (currentRoom == 1 || currentRoom == 2 || currentRoom == 4)
+	else if (currentRoom == 2 || currentRoom == 1 || currentRoom == 3)
 	{
 		cout << "Cannot move West" << endl;
 	}
@@ -451,9 +454,9 @@ void Player::MoveE()
 	else if (currentRoom == 0)
 	{
 		cout << "Moved East" << endl;
-		currentRoom = 3;
+		currentRoom = 4;
 	}
-	else if (currentRoom == 1 || currentRoom == 3 || currentRoom == 4)
+	else if (currentRoom == 4 || currentRoom == 3 || currentRoom == 1)
 	{
 		cout << "Cannot move East" << endl;
 	}
@@ -464,7 +467,7 @@ void Player::MoveS()
 	if (currentRoom == 0)
 	{
 		cout << "Moved South" << endl;
-		currentRoom = 4;
+		currentRoom = 3;
 	}
 	else if (currentRoom == 1)
 	{
@@ -494,12 +497,13 @@ void Player::Exit()
 
 void Game::Run()
 {
-	do
+	currentRoom = 0;
+	while (i = 1)
 	{
 		commandList();
+		CheckRoom();
 		Command();
 	}
-	while (exit == 0);
 }
 
 void Game::commandList()
@@ -511,5 +515,50 @@ void Game::commandList()
 	cout << "move east" << endl;
 	cout << "use" << endl;
 	cout << "cast" << endl;
-	cout << "exit" << endl;
+	cout << " " << endl;
+}
+
+void Game::CheckRoom()
+{
+	if (currentRoom == 0)
+	{
+		CenterRoom();
+	}
+	else if (currentRoom == 1)
+	{
+		NorthHall();
+	}
+	else if (currentRoom == 2)
+	{
+		Bathroom();
+	}
+	else if (currentRoom == 3)
+	{
+		Study();
+	}
+	else if (currentRoom == 4)
+	{
+		Warehouse();
+	}
+}
+
+void Game::CenterRoom()
+{
+	cout << "A spacious room with doors left, right, and behind you. In front of you is a hallway that you can't see the end of." << endl;
+}
+void Game::NorthHall()
+{
+	cout << "A hallway which doesn't seem to end." << endl;
+}
+void Game::Bathroom()
+{
+	cout << "A small bathroom." << endl;
+}
+void Game::Study()
+{
+	cout << "A study with many books." << endl;
+}
+void Game::Warehouse()
+{
+	cout << "A warehouse filled with boxes." << endl;
 }

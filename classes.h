@@ -56,19 +56,22 @@ public:
 	void Run();
 	void Command();
 	void commandList();
+public:
+	void CheckRoom();
+	void CenterRoom();
+	void NorthHall();
+	void Bathroom();
+	void Study();
+	void Warehouse();
 protected:
-	bool exit = 0;
 	int currentRoom;
+	bool i = 1;
 	string commandIn;
 };
 
 class Player : public Game
 {
-private:
-	string playerName;
-	int currentRoom = 0;
 public:
-	void createPlayer();
 	//player actions
 	void MoveN();
 	void MoveW();
@@ -79,30 +82,22 @@ public:
 	void Exit();
 };
 
-class Room
-{
-protected:
-	int RoomNum;
-	string const roomDescr;
-	string roomItems;
-	int itemsLeft;
-public:
-	void describeRoom();
-	void describeItems();
-};
-
-class CenterRoom : public Room
-{
-private:
-	int RoomNum;
-	string const roomDescr = "A large room with a door on each of its walls.";
-	string roomItems;
-	int itemsLeft = 0;
-};
+//class Room : public Game
+//{
+//public:
+//	void CheckRoom();
+//	void CenterRoom();
+//	void NorthHall();
+//	void Bathroom();
+//	void Study();
+//	void Warehouse();
+//};
 
 class Item
 {
-
+	string ItemName;
+	int numofItems;
+	string itemDescr;
 };
 
 #endif
