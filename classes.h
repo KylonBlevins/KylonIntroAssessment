@@ -46,5 +46,43 @@ public:
 	void writeTest();
 	void resultsLogger(); //logs the results of the testStringClass function and how many were successful
 };
+//Everything below is for the basic text adventure game assessment
+class Game
+{
+private:
+	int currentRoom = 0;
+public:
+	void Run();
+	void CreatePlayer();
+};
+
+class Room
+{
+protected:
+	int roomNum;
+	string roomDescr;
+};
+
+class Item
+{
+
+};
+
+class Player
+{
+protected:
+	string PlName;
+	int SpSlots = 4;
+public:
+	void castSpell();
+	void Move();
+	void Rest();
+
+};
+
+class Spell
+{
+
+};
 
 #endif
