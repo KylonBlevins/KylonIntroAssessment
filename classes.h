@@ -46,21 +46,63 @@ public:
 	void writeTest();
 	void resultsLogger(); //logs the results of the testStringClass function and how many were successful
 };
+
+
 //Everything below is for the basic text adventure game assessment
 class Game
 {
 private:
 	int currentRoom = 0;
+	int roomGrid[3][3] =
+	{
+		{0, 2, 0},
+		{3, 1, 4},
+		{0, 5, 0}
+	};
 public:
+	bool exit = 0;
 	void Run();
-	void CreatePlayer();
 };
 
-class Room
+class Room : public Game
 {
 protected:
+	bool isLocked = 0;
 	int roomNum;
 	string roomDescr;
+public:
+	void printDescr();
+};
+
+class CenterRoom : public Room
+{
+private:
+	int roomNum = 1;
+	string roomDescr = "A large room with a door on each wall, to a total of four.";
+};
+
+class NorthRoom : public Room
+{
+private:
+	int roomNum = 2;
+};
+
+class WestRoom : public Room
+{
+private:
+	int roomNum = 3;
+};
+
+class EastRoom : public Room
+{
+private:
+	int roomNum = 4;
+};
+
+class SouthRoom : public Room
+{
+private:
+	int roomNum = 5;
 };
 
 class Item
@@ -74,10 +116,11 @@ protected:
 	string PlName;
 	int SpSlots = 4;
 public:
+	void createPlayer();
 	void castSpell();
 	void Move();
 	void Rest();
-
+	void Stats();
 };
 
 class Spell

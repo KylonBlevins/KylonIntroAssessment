@@ -368,3 +368,27 @@ void StringC::assessment1Data()
 	Test.Prepend("H");
 	Test.WriteToConsole();
 }
+
+
+//The main game loop for the text adventure game
+void Game::Run()
+{
+	Player P1;
+	cout << "You wake up inside of a room you don't recognize. What is your name?" << endl;
+	P1.createPlayer();
+	do
+	{
+
+	} 
+	while (exit = 0);
+}
+//Allows input for the player name
+void Player::createPlayer()
+{
+	cin >> PlName;
+}
+
+void Room::printDescr()
+{
+	cout << roomDescr;
+}

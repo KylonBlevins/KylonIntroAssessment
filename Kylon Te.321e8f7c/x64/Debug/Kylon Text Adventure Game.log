@@ -1,0 +1,8 @@
+﻿  functions.cpp
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(236,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(267,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(283,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(298,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(314,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(315,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Kylon Text Adventure Game.vcxproj -> C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\x64\Debug\Kylon Text Adventure Game.exe
