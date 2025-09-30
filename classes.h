@@ -49,81 +49,39 @@ public:
 
 
 //Everything below is for the basic text adventure game assessment
+
 class Game
 {
-private:
-	int currentRoom = 0;
-	int roomGrid[3][3] =
-	{
-		{0, 2, 0},
-		{3, 1, 4},
-		{0, 5, 0}
-	};
 public:
-	bool exit = 0;
 	void Run();
-};
-
-class Room : public Game
-{
+	void Command();
 protected:
-	bool isLocked = 0;
-	int roomNum;
-	string roomDescr;
+	int currentRoom = 0;
+	string commandIn;
+};
+
+class Player : public Game
+{
+private:
+	string playerName;
 public:
-	void printDescr();
+	//player actions
+	void MoveN();
+	void MoveW();
+	void MoveE();
+	void MoveS();
+	void Use();
+	void Cast();
 };
 
-class CenterRoom : public Room
+class Room
 {
 private:
-	int roomNum = 1;
-	string roomDescr = "A large room with a door on each wall, to a total of four.";
-};
-
-class NorthRoom : public Room
-{
-private:
-	int roomNum = 2;
-};
-
-class WestRoom : public Room
-{
-private:
-	int roomNum = 3;
-};
-
-class EastRoom : public Room
-{
-private:
-	int roomNum = 4;
-};
-
-class SouthRoom : public Room
-{
-private:
-	int roomNum = 5;
+	int RoomNum = 1;
+	string roomDescr;
 };
 
 class Item
-{
-
-};
-
-class Player
-{
-protected:
-	string PlName;
-	int SpSlots = 4;
-public:
-	void createPlayer();
-	void castSpell();
-	void Move();
-	void Rest();
-	void Stats();
-};
-
-class Spell
 {
 
 };

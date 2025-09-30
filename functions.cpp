@@ -4,6 +4,7 @@
 #include "classes.h"
 using namespace std;
 
+Player P1;
 TestString Test;
 
 //This function and those below it run and test all of the functions inside of the String class
@@ -369,26 +370,65 @@ void StringC::assessment1Data()
 	Test.WriteToConsole();
 }
 
-
-//The main game loop for the text adventure game
 void Game::Run()
 {
-	Player P1;
-	cout << "You wake up inside of a room you don't recognize. What is your name?" << endl;
-	P1.createPlayer();
+	int i;
 	do
 	{
-
-	} 
-	while (exit = 0);
-}
-//Allows input for the player name
-void Player::createPlayer()
-{
-	cin >> PlName;
+		
+	}
+	while (i == 0);
 }
 
-void Room::printDescr()
+void Game::Command()
 {
-	cout << roomDescr;
+	cin >> commandIn;
+	if (commandIn == "move north")
+	{
+		P1.MoveN();
+	}
+	else if (commandIn == "move west")
+	{
+		P1.MoveW();
+	}
+	else if (commandIn == "move east")
+	{
+		P1.MoveE();
+	}
+	else if (commandIn == "move south")
+	{
+		P1.MoveS();
+	}
+	else if (commandIn == "use")
+	{
+		P1.Use();
+	}
+	else if (commandIn == "cast")
+	{
+		P1.Cast();
+	}
+}
+
+void Player::MoveN()
+{
+	if (currentRoom = 0)
+	{
+
+	}
+	else if (currentRoom = 1)
+	{
+
+	}
+	else if (currentRoom = 2)
+	{
+
+	}
+	else if (currentRoom = 3)
+	{
+
+	}
+	else if (currentRoom = 4)
+	{
+
+	}
 }
