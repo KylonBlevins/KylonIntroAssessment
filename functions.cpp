@@ -370,14 +370,20 @@ void StringC::assessment1Data()
 	Test.WriteToConsole();
 }
 
+void Player::createPlayer()
+{
+	cin >> playerName;
+}
+
 void Game::Run()
 {
-	int i;
+	P1.createPlayer();
 	do
 	{
-		
+		commandList();
+		Command();
 	}
-	while (i == 0);
+	while (exit == 0);
 }
 
 void Game::Command()
@@ -413,22 +419,119 @@ void Player::MoveN()
 {
 	if (currentRoom = 0)
 	{
-
+		currentRoom = 1;
+		cout << "Moved North" << endl;
 	}
 	else if (currentRoom = 1)
 	{
-
+		currentRoom = 1;
+		cout << "Cannot move North" << endl;
 	}
 	else if (currentRoom = 2)
 	{
-
+		currentRoom = 2;
+		cout << "Cannot move North" << endl;
 	}
 	else if (currentRoom = 3)
 	{
-
+		currentRoom = 3;
+		cout << "Cannot move North" << endl;
 	}
 	else if (currentRoom = 4)
 	{
-
+		currentRoom = 0;
+		cout << "Moved North" << endl;
 	}
+}
+
+void Player::MoveW()
+{
+	if (currentRoom = 0)
+	{
+		currentRoom = 2;
+		cout << "Moved West" << endl;
+	}
+	else if (currentRoom = 1)
+	{
+		currentRoom = 1;
+		cout << "Cannot move West" << endl;
+	}
+	else if (currentRoom = 2)
+	{
+		currentRoom = 2;
+		cout << "Cannot move West" << endl;
+	}
+	else if (currentRoom = 3)
+	{
+		currentRoom = 0;
+		cout << "Moved West" << endl;
+	}
+	else if (currentRoom = 4)
+	{
+		currentRoom = 4;
+		cout << "Cannot move West" << endl;
+	}
+}
+
+void Player::MoveE()
+{
+	if (currentRoom = 0)
+	{
+		currentRoom = 3;
+		cout << "Moved East" << endl;
+	}
+	else if (currentRoom = 1)
+	{
+		currentRoom = 1;
+		cout << "Cannot move East" << endl;
+	}
+	else if (currentRoom = 2)
+	{
+		currentRoom = 0;
+		cout << "Moved East" << endl;
+	}
+	else if (currentRoom = 3)
+	{
+		currentRoom = 3;
+		cout << "Cannot move East" << endl;
+	}
+	else if (currentRoom = 4)
+	{
+		currentRoom = 4;
+		cout << "Cannot move East" << endl;
+	}
+}
+
+void Player::MoveS()
+{
+	if (currentRoom = 0)
+	{
+		currentRoom = 4;
+		cout << "Moved South" << endl;
+	}
+	else if (currentRoom = 1)
+	{
+		currentRoom = 0;
+		cout << "Moved South" << endl;
+	}
+	else if (currentRoom = 2)
+	{
+		currentRoom = 2;
+		cout << "Cannot move South" << endl;
+	}
+	else if (currentRoom = 3)
+	{
+		currentRoom = 3;
+		cout << "Cannot move South" << endl;
+	}
+	else if (currentRoom = 4)
+	{
+		currentRoom = 4;
+		cout << "Cannot move South" << endl;
+	}
+}
+
+void Game::commandList()
+{
+
 }

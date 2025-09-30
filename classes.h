@@ -55,7 +55,9 @@ class Game
 public:
 	void Run();
 	void Command();
+	void commandList();
 protected:
+	int exit = 0;
 	int currentRoom = 0;
 	string commandIn;
 };
@@ -65,6 +67,7 @@ class Player : public Game
 private:
 	string playerName;
 public:
+	void createPlayer();
 	//player actions
 	void MoveN();
 	void MoveW();
@@ -72,13 +75,28 @@ public:
 	void MoveS();
 	void Use();
 	void Cast();
+	void Exit();
 };
 
 class Room
 {
+protected:
+	int RoomNum;
+	string const roomDescr;
+	string roomItems;
+	int itemsLeft;
+public:
+	void describeRoom();
+	void describeItems();
+};
+
+class CenterRoom : public Room
+{
 private:
-	int RoomNum = 1;
-	string roomDescr;
+	int RoomNum;
+	string const roomDescr = "A large room with a door on each of its walls.";
+	string roomItems;
+	int itemsLeft = 0;
 };
 
 class Item
