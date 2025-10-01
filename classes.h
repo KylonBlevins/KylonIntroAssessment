@@ -56,17 +56,14 @@ public:
 	void Run();
 	void Command();
 	void commandList();
-public:
-	void CheckRoom();
-	void CenterRoom();
-	void NorthHall();
-	void Bathroom();
-	void Study();
-	void Warehouse();
+	string Inventory[10];
 protected:
+	int theOrb = 0;
 	int currentRoom;
 	bool i = 1;
 	string commandIn;
+	int numofOrbs = 1;
+	int numofCheese = 1;
 };
 
 class Player : public Game
@@ -79,25 +76,25 @@ public:
 	void MoveS();
 	void Use();
 	void Cast();
+	void checkInventory();
 	void Exit();
 };
 
-//class Room : public Game
-//{
-//public:
-//	void CheckRoom();
-//	void CenterRoom();
-//	void NorthHall();
-//	void Bathroom();
-//	void Study();
-//	void Warehouse();
-//};
-
 class Item
 {
-	string ItemName;
-	int numofItems;
+protected:
 	string itemDescr;
+	string itemName;
 };
+
+class TheOrb : public Item, public Game
+{
+private:
+	string itemDescr = "A small crystal sphere.";
+	string itemName = "t h e  o r b";
+public:
+	void orbFunction();
+};
+
 
 #endif

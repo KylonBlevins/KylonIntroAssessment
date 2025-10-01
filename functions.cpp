@@ -414,11 +414,26 @@ void Player::MoveN()
 	{
 		cout << "Moved North" << endl;
 		currentRoom = 1;
+		cout << "A hallway which doesn't seem to end." << endl;
+		theOrb++;
+		if (theOrb > 2)
+		{
+			cout << " " << endl;
+			cout << "t h e  o r b  r u i n e d  m y  l i f e " << endl;
+			cout << " " << endl;
+			theOrb = 0;
+			if (numofOrbs == 1)
+			{
+				numofOrbs == 0;
+				Inventory[0] = "t h e  o r b";
+			}
+		}
 	}
 	else if (currentRoom == 3)
 	{
 		cout << "Moved North" << endl;
 		currentRoom = 0;
+		cout << "A spacious room with doors left, right, and behind you. In front of you is a hallway that you can't see the end of." << endl;
 	}
 	else if (currentRoom == 2 || currentRoom == 4)
 	{
@@ -432,11 +447,13 @@ void Player::MoveW()
 	{
 		cout << "Moved West" << endl;
 		currentRoom = 2;
+		cout << "A small bathroom." << endl;
 	}
 	else if (currentRoom == 4)
 	{
 		cout << "Moved West" << endl;
 		currentRoom = 0;
+		cout << "A spacious room with doors left, right, and behind you. In front of you is a hallway that you can't see the end of." << endl;
 	}
 	else if (currentRoom == 2 || currentRoom == 1 || currentRoom == 3)
 	{
@@ -450,11 +467,13 @@ void Player::MoveE()
 	{
 		cout << "Moved East" << endl;
 		currentRoom = 0;
+		cout << "A spacious room with doors left, right, and behind you. In front of you is a hallway that you can't see the end of." << endl;
 	}
 	else if (currentRoom == 0)
 	{
 		cout << "Moved East" << endl;
 		currentRoom = 4;
+		cout << "A warehouse filled with boxes." << endl;
 	}
 	else if (currentRoom == 4 || currentRoom == 3 || currentRoom == 1)
 	{
@@ -468,6 +487,7 @@ void Player::MoveS()
 	{
 		cout << "Moved South" << endl;
 		currentRoom = 3;
+		cout << "A study with many books." << endl;
 	}
 	else if (currentRoom == 1)
 	{
@@ -482,7 +502,7 @@ void Player::MoveS()
 
 void Player::Use()
 {
-
+	cout << "What item would you like to use?" << endl;
 }
 
 void Player::Cast()
@@ -495,13 +515,17 @@ void Player::Exit()
 
 }
 
+void Player::checkInventory()
+{
+
+}
+
 void Game::Run()
 {
 	currentRoom = 0;
 	while (i = 1)
 	{
 		commandList();
-		CheckRoom();
 		Command();
 	}
 }
@@ -518,47 +542,7 @@ void Game::commandList()
 	cout << " " << endl;
 }
 
-void Game::CheckRoom()
+void TheOrb::orbFunction()
 {
-	if (currentRoom == 0)
-	{
-		CenterRoom();
-	}
-	else if (currentRoom == 1)
-	{
-		NorthHall();
-	}
-	else if (currentRoom == 2)
-	{
-		Bathroom();
-	}
-	else if (currentRoom == 3)
-	{
-		Study();
-	}
-	else if (currentRoom == 4)
-	{
-		Warehouse();
-	}
-}
-
-void Game::CenterRoom()
-{
-	cout << "A spacious room with doors left, right, and behind you. In front of you is a hallway that you can't see the end of." << endl;
-}
-void Game::NorthHall()
-{
-	cout << "A hallway which doesn't seem to end." << endl;
-}
-void Game::Bathroom()
-{
-	cout << "A small bathroom." << endl;
-}
-void Game::Study()
-{
-	cout << "A study with many books." << endl;
-}
-void Game::Warehouse()
-{
-	cout << "A warehouse filled with boxes." << endl;
+	cout << "You use " << itemName << "." << endl;
 }
