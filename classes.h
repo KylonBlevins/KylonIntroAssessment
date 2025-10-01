@@ -56,7 +56,7 @@ public:
 	void Run();
 	void Command();
 	void commandList();
-	string Inventory[10];
+	string Inventory[2];
 protected:
 	int theOrb = 0;
 	int currentRoom;
@@ -94,7 +94,17 @@ private:
 	string itemName = "t h e  o r b";
 public:
 	void orbFunction();
+	void orbInfo();
 };
 
+class CheesePills : public Item, public Game
+{
+private:
+	string itemDescr = "Pills made of delicious cheese.";
+	string itemName = "Cheese Pills";
+public:
+	void cheeseFunction();
+	void cheeseInfo();
+};
 
 #endif

@@ -5,7 +5,8 @@
 using namespace std;
 
 Player P1;
-Game Gameval;
+TheOrb Orb;
+CheesePills Cheese;
 //Room Rooms;
 
 TestString Test;
@@ -426,6 +427,7 @@ void Player::MoveN()
 			{
 				numofOrbs == 0;
 				Inventory[0] = "t h e  o r b";
+				Orb.orbInfo();
 			}
 		}
 	}
@@ -448,6 +450,12 @@ void Player::MoveW()
 		cout << "Moved West" << endl;
 		currentRoom = 2;
 		cout << "A small bathroom." << endl;
+		if (numofCheese == 1)
+		{
+			numofCheese == 0;
+			Inventory[1] = "Cheese Pills";
+			Cheese.cheeseInfo();
+		}
 	}
 	else if (currentRoom == 4)
 	{
@@ -503,6 +511,33 @@ void Player::MoveS()
 void Player::Use()
 {
 	cout << "What item would you like to use?" << endl;
+	for (int j = 0; j < 2; j++)
+	{
+		cout << Inventory[j] << endl;
+	}
+	getline(cin, commandIn);
+	if (commandIn == "the orb" || commandIn == "t h e  o r b")
+	{
+		if (Inventory[0] == "t h e  o r b")
+		{
+			Orb.orbFunction();
+		}
+		else
+		{
+			cout << "You don't have that item!" << endl;
+		}
+	}
+	if (commandIn == "cheese pills")
+	{
+		if (Inventory[1] == "Cheese Pills")
+		{
+			Cheese.cheeseFunction();
+		}
+		else
+		{
+			cout << "You don't have that item!" << endl;
+		}
+	}
 }
 
 void Player::Cast()
@@ -542,7 +577,27 @@ void Game::commandList()
 	cout << " " << endl;
 }
 
+void TheOrb::orbInfo()
+{
+	cout << itemName << endl;
+	cout << itemDescr << endl;
+}
+
 void TheOrb::orbFunction()
 {
-	cout << "You use " << itemName << "." << endl;
+	cout << "You brandish " << itemName << "." << endl;
+	cout << "Nothing happens." << endl;
+}
+
+void CheesePills::cheeseFunction()
+{
+	Inventory[1] = " ";
+	cout << "You eat the " << itemName << "." << endl;
+	cout << "You feel cheesy." << endl;
+}
+
+void CheesePills::cheeseInfo()
+{
+	cout << itemName << endl;
+	cout << itemDescr << endl;
 }
