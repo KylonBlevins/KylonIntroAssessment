@@ -13,7 +13,7 @@ protected:
 	string data = "He"; //the universal variable used by all functions
 	int testsPassed = 0; //variable for evaluating how many of the functions passed for the resultsLogger function
 public:
-	string toLower();
+	string toLower(string input);
 	string toUpper();
 	int strLength();
 	string Append(string str);
@@ -56,7 +56,7 @@ public:
 	void Run();
 	void Command();
 	void commandList();
-	string Inventory[2];
+	string Inventory[3];
 protected:
 	int theOrb = 0;
 	int currentRoom;
@@ -64,6 +64,7 @@ protected:
 	string commandIn;
 	int numofOrbs = 1;
 	int numofCheese = 1;
+	int numofSword = 1;
 };
 
 class Player : public Game
@@ -105,6 +106,16 @@ private:
 public:
 	void cheeseFunction();
 	void cheeseInfo();
+};
+
+class EVILsword : public Item, public Game
+{
+private:
+	string itemDescr = "A DASTARDLY and DESPICABLE blade.";
+	string itemName = "EVIL Sword";
+public:
+	void swordFunction();
+	void swordInfo();
 };
 
 #endif

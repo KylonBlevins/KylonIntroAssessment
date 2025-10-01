@@ -7,8 +7,10 @@ using namespace std;
 Player P1;
 TheOrb Orb;
 CheesePills Cheese;
+EVILsword Sword;
 //Room Rooms;
 
+StringC GameS;
 TestString Test;
 
 //This function and those below it run and test all of the functions inside of the String class
@@ -46,7 +48,7 @@ void TestString::toLowerTest()
 {
 	ofstream strLog("string_test_log.txt", ios::app);
 	cout << "What is 'He' after using the toLower function?" << endl;
-	Test.toLower();
+	/*Test.toLower();*/
 	cout << Test.data << endl;
 	if (data == "he")
 	{
@@ -211,16 +213,16 @@ void TestString::writeTest()
 //Test Functions
 
 //converts data into lowercase using the ascii method
-string StringC::toLower()
+string StringC::toLower(string input)
 {
-	for (int i = 0; i < data.length(); i++)
+	for (int i = 0; i < input.length(); i++)
 	{
-		if (data[i] >= 'A' && data[i] <= 'Z')
+		if (input[i] >= 'A' && input[i] <= 'Z')
 		{
-			data[i] = data[i] + 32;
+			input[i] = input[i] + 32;
 		}
 	}
-	return data;
+	return input;
 }
 //converts data into uppercase using the ascii method
 string StringC::toUpper()
@@ -379,6 +381,7 @@ void StringC::assessment1Data()
 void Game::Command()
 {
 	getline(cin, commandIn);
+	GameS.toLower(commandIn);
 	if (commandIn == "move north")
 	{
 		P1.MoveN();
@@ -405,7 +408,11 @@ void Game::Command()
 	}
 	else if (commandIn == "exit")
 	{
-		
+		P1.Exit();
+	}
+	else if (commandIn == "inventory")
+	{
+		P1.checkInventory();
 	}
 }
 
@@ -482,6 +489,12 @@ void Player::MoveE()
 		cout << "Moved East" << endl;
 		currentRoom = 4;
 		cout << "A warehouse filled with boxes." << endl;
+		if (numofSword == 1)
+		{
+			numofSword = 0;
+			Inventory[2] = "EVIL Sword";
+			Sword.swordInfo();
+		}
 	}
 	else if (currentRoom == 4 || currentRoom == 3 || currentRoom == 1)
 	{
@@ -501,6 +514,7 @@ void Player::MoveS()
 	{
 		cout << "Moved South" << endl;
 		currentRoom = 0;
+		cout << "A spacious room with doors left, right, and behind you. In front of you is a hallway that you can't see the end of." << endl;
 	}
 	else if (currentRoom == 2 || currentRoom == 3 || currentRoom == 4)
 	{
@@ -511,11 +525,12 @@ void Player::MoveS()
 void Player::Use()
 {
 	cout << "What item would you like to use?" << endl;
-	for (int j = 0; j < 2; j++)
+	for (int j = 0; j < 3; j++)
 	{
 		cout << Inventory[j] << endl;
 	}
 	getline(cin, commandIn);
+	GameS.toLower(commandIn);
 	if (commandIn == "the orb" || commandIn == "t h e  o r b")
 	{
 		if (Inventory[0] == "t h e  o r b")
@@ -538,6 +553,13 @@ void Player::Use()
 			cout << "You don't have that item!" << endl;
 		}
 	}
+	if (commandIn == "evil sword")
+	{
+		if (Inventory[2] == "EVIL Sword")
+		{
+			Sword.swordFunction();
+		}
+	}
 }
 
 void Player::Cast()
@@ -547,12 +569,16 @@ void Player::Cast()
 
 void Player::Exit()
 {
-
+	i = i - 1;
 }
 
 void Player::checkInventory()
 {
-
+	cout << "||Inventory||" << endl;
+	for (int j = 0; j < 3; j++)
+	{
+		cout << Inventory[j] << endl;
+	}
 }
 
 void Game::Run()
@@ -574,6 +600,8 @@ void Game::commandList()
 	cout << "move east" << endl;
 	cout << "use" << endl;
 	cout << "cast" << endl;
+	cout << "inventory" << endl;
+	cout << "exit" << endl;
 	cout << " " << endl;
 }
 
@@ -597,6 +625,18 @@ void CheesePills::cheeseFunction()
 }
 
 void CheesePills::cheeseInfo()
+{
+	cout << itemName << endl;
+	cout << itemDescr << endl;
+}
+
+void EVILsword::swordFunction()
+{
+	cout << "You swing the " << itemName << "." << endl;
+	cout << "You feel EVIL." << endl;
+}
+
+void EVILsword::swordInfo()
 {
 	cout << itemName << endl;
 	cout << itemDescr << endl;

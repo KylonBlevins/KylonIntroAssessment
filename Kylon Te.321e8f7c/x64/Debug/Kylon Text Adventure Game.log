@@ -1,10 +1,12 @@
 ﻿  functions.cpp
-C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(241,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(272,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(288,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(303,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(319,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(320,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(428,15): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(455,16): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(243,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(274,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(290,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(305,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(321,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(322,17): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(435,15): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\functions.cpp(462,16): warning C4553: '==': result of expression not used; did you intend '='?
+  main.cpp
+  Generating Code...
   Kylon Text Adventure Game.vcxproj -> C:\Users\s258003\Documents\GitHub\Kylon Text Adventure Game\x64\Debug\Kylon Text Adventure Game.exe
