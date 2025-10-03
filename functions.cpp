@@ -8,6 +8,8 @@ Player P1;
 TheOrb Orb;
 CheesePills Cheese;
 EVILsword Sword;
+spell Spells;
+Game runG;
 //Room Rooms;
 
 StringC GameS;
@@ -378,44 +380,6 @@ void StringC::assessment1Data()
 
 
 
-void Game::Command()
-{
-	getline(cin, commandIn);
-	GameS.toLower(commandIn);
-	if (commandIn == "move north")
-	{
-		P1.MoveN();
-	}
-	else if (commandIn == "move west")
-	{
-		P1.MoveW();
-	}
-	else if (commandIn == "move east")
-	{
-		P1.MoveE();
-	}
-	else if (commandIn == "move south")
-	{
-		P1.MoveS();
-	}
-	else if (commandIn == "use")
-	{
-		P1.Use();
-	}
-	else if (commandIn == "cast")
-	{
-		P1.Cast();
-	}
-	else if (commandIn == "exit")
-	{
-		P1.Exit();
-	}
-	else if (commandIn == "inventory")
-	{
-		P1.checkInventory();
-	}
-}
-
 void Player::MoveN()
 {
 	if (currentRoom == 0 || currentRoom == 1)
@@ -530,7 +494,7 @@ void Player::Use()
 		cout << Inventory[j] << endl;
 	}
 	getline(cin, commandIn);
-	GameS.toLower(commandIn);
+	commandIn = GameS.toLower(commandIn);
 	if (commandIn == "the orb" || commandIn == "t h e  o r b")
 	{
 		if (Inventory[0] == "t h e  o r b")
@@ -564,12 +528,22 @@ void Player::Use()
 
 void Player::Cast()
 {
-
-}
-
-void Player::Exit()
-{
-	i = i - 1;
+	cout << "What spell would you like to cast?" << endl;
+	Spells.showSpells();
+	getline(cin, commandIn);
+	commandIn = GameS.toLower(commandIn);
+	if (commandIn == "teleport")
+	{
+		Spells.Teleport();
+	}
+	else if (commandIn == "explosion")
+	{
+		Spells.Explosion();
+	}
+	else if (commandIn == "cheesemancy")
+	{
+		Spells.Cheesemancy();
+	}
 }
 
 void Player::checkInventory()
@@ -584,10 +558,47 @@ void Player::checkInventory()
 void Game::Run()
 {
 	currentRoom = 0;
-	while (i = 1)
+	while (exit == 1);
 	{
 		commandList();
-		Command();
+		getline(cin, commandIn);
+		commandIn = GameS.toLower(commandIn);
+		if (commandIn == "exit")
+		{
+			P1.Exit();
+		}
+		if (commandIn == "move north")
+		{
+			P1.MoveN();
+		}
+		else if (commandIn == "move west")
+		{
+			P1.MoveW();
+		}
+		else if (commandIn == "move east")
+		{
+			P1.MoveE();
+		}
+		else if (commandIn == "move south")
+		{
+			P1.MoveS();
+		}
+		else if (commandIn == "use")
+		{
+			P1.Use();
+		}
+		else if (commandIn == "cast")
+		{
+			P1.Cast();
+		}
+		else if (commandIn == "inventory")
+		{
+			P1.checkInventory();
+		}
+		else if (commandIn == "spell list")
+		{
+			Spells.showSpells();
+		}
 	}
 }
 
@@ -601,6 +612,7 @@ void Game::commandList()
 	cout << "use" << endl;
 	cout << "cast" << endl;
 	cout << "inventory" << endl;
+	cout << "spell list" << endl;
 	cout << "exit" << endl;
 	cout << " " << endl;
 }
@@ -640,4 +652,36 @@ void EVILsword::swordInfo()
 {
 	cout << itemName << endl;
 	cout << itemDescr << endl;
+}
+
+void spell::showSpells()
+{
+	for (int j = 0; j < 3; j++)
+	{
+		cout << spellList[j] << endl;
+	}
+}
+
+void spell::Teleport()
+{
+	cout << "You manage to teleport out of this mysterious structure." << endl;
+	P1.Exit();
+}
+
+void spell::Explosion()
+{
+	cout << "You explode." << endl;
+	P1.Exit();
+}
+
+void spell::Cheesemancy()
+{
+	cout << "You create a wheel of cheese, but your poor mastery over Cheesemancy makes it melt on the spot." << endl;
+	P1.Exit();
+}
+
+void Player::Exit()
+{
+	cout << "The game is over!" << endl;
+	exit = 0;
 }

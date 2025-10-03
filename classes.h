@@ -55,13 +55,12 @@ class Game
 {
 public:
 	void Run();
-	void Command();
 	void commandList();
 	string Inventory[3];
 protected:
 	int theOrb = 0;
 	int currentRoom;
-	bool i = 1;
+	bool exit;
 	string commandIn;
 	int numofOrbs = 1;
 	int numofCheese = 1;
@@ -117,6 +116,17 @@ private:
 public:
 	void swordFunction();
 	void swordInfo();
+};
+
+class spell
+{
+private:
+	string spellList[3] = { "Teleport", "Explosion", "Cheesemancy" };
+public:
+	void showSpells();
+	void Teleport();
+	void Explosion();
+	void Cheesemancy();
 };
 
 #endif
