@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\kylon\\Documents\\GitHub\\KylonIntroAssessment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{321E8F7C-6ECC-4393-89E3-6A78FEF9023E}|Kylon Text Adventure Game.vcxproj|C:\\Users\\kylon\\Documents\\GitHub\\KylonIntroAssessment\\functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{321E8F7C-6ECC-4393-89E3-6A78FEF9023E}|Kylon Text Adventure Game.vcxproj|solutionrelative:functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{321E8F7C-6ECC-4393-89E3-6A78FEF9023E}|Kylon Text Adventure Game.vcxproj|C:\\Users\\kylon\\Documents\\GitHub\\KylonIntroAssessment\\classes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{321E8F7C-6ECC-4393-89E3-6A78FEF9023E}|Kylon Text Adventure Game.vcxproj|solutionrelative:classes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{321E8F7C-6ECC-4393-89E3-6A78FEF9023E}|Kylon Text Adventure Game.vcxproj|C:\\Users\\kylon\\Documents\\GitHub\\KylonIntroAssessment\\functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{321E8F7C-6ECC-4393-89E3-6A78FEF9023E}|Kylon Text Adventure Game.vcxproj|solutionrelative:functions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{321E8F7C-6ECC-4393-89E3-6A78FEF9023E}|Kylon Text Adventure Game.vcxproj|C:\\Users\\kylon\\Documents\\GitHub\\KylonIntroAssessment\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -40,13 +40,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "classes.h",
               "DocumentMoniker": "C:\\Users\\kylon\\Documents\\GitHub\\KylonIntroAssessment\\classes.h",
               "RelativeDocumentMoniker": "classes.h",
               "ToolTip": "C:\\Users\\kylon\\Documents\\GitHub\\KylonIntroAssessment\\classes.h",
               "RelativeToolTip": "classes.h",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAADoAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAH0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-09-30T14:42:12.497Z",
               "IsPinned": true,
@@ -54,13 +54,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "functions.cpp",
               "DocumentMoniker": "C:\\Users\\kylon\\Documents\\GitHub\\KylonIntroAssessment\\functions.cpp",
               "RelativeDocumentMoniker": "functions.cpp",
               "ToolTip": "C:\\Users\\kylon\\Documents\\GitHub\\KylonIntroAssessment\\functions.cpp",
               "RelativeToolTip": "functions.cpp",
-              "ViewState": "AgIAAOoBAAAAAAAAAAAAAPABAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAEcCAAAAAAAAAAAAAJMCAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-30T14:42:13.897Z",
               "IsPinned": true,

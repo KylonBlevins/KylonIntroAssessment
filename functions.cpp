@@ -621,12 +621,14 @@ void TheOrb::orbInfo()
 {
 	cout << itemName << endl;
 	cout << itemDescr << endl;
+	cout << " " << endl;
 }
 
 void TheOrb::orbFunction()
 {
 	cout << "You brandish " << itemName << "." << endl;
 	cout << "Nothing happens." << endl;
+	cout << " " << endl;
 }
 
 void CheesePills::cheeseFunction()
@@ -634,24 +636,28 @@ void CheesePills::cheeseFunction()
 	Inventory[1] = " ";
 	cout << "You eat the " << itemName << "." << endl;
 	cout << "You feel cheesy." << endl;
+	cout << " " << endl;
 }
 
 void CheesePills::cheeseInfo()
 {
 	cout << itemName << endl;
 	cout << itemDescr << endl;
+	cout << " " << endl;
 }
 
 void EVILsword::swordFunction()
 {
 	cout << "You swing the " << itemName << "." << endl;
 	cout << "You feel EVIL." << endl;
+	cout << " " << endl;
 }
 
 void EVILsword::swordInfo()
 {
 	cout << itemName << endl;
 	cout << itemDescr << endl;
+	cout << " " << endl;
 }
 
 void spell::showSpells()
