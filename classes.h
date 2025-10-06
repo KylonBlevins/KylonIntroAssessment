@@ -53,18 +53,18 @@ public:
 //gawrsh
 class Game
 {
-public:
-	void Run(); //runs the game
-	string Inventory[3];
-	void commandList();
-protected:
-	int theOrb = 0; //value tied to a small easter egg for moving north in the long hallway enough times
-	int currentRoom;
-	bool exit;  //tied to the while loop inside of Run()
-	string commandIn;  //the input value for all player commands
-	int numofOrbs = 1;  //the values below are all tied to an item ingame and how a player obtains said item
-	int numofCheese = 1;
-	int numofSword = 1;
+	protected:
+		int theOrb = 0; //value tied to a small easter egg for moving north in the long hallway enough times
+		int currentRoom;
+		bool exit = false;  //tied to the while loop inside of Run()
+		string commandIn;  //the input value for all player commands
+		int numofOrbs = 1;  //the values below are all tied to an item ingame and how a player obtains said item
+		int numofCheese = 1;
+		int numofSword = 1;
+	public:
+		void Run(); //runs the game
+		string Inventory[3];
+		void commandList();
 };
 
 class Player : public Game

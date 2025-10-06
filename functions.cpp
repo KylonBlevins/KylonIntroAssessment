@@ -558,7 +558,7 @@ void Player::checkInventory()
 void Game::Run()
 {
 	currentRoom = 0;
-	while (exit == 1);
+	while (!exit)
 	{
 		commandList();
 		getline(cin, commandIn);
@@ -689,5 +689,5 @@ void spell::Cheesemancy()
 void Player::Exit()
 {
 	cout << "The game is over!" << endl;
-	exit = 0;
+	exit = true;
 }
